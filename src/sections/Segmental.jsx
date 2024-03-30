@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  IconLevelPerfect,
-  IconLevelOk,
-  IconLevelGood,
-  SegmentalBodyIcon,
-} from "../assets/SegIcons";
+import { IconLevelGood } from "../assets/SegIcons";
 import { FaCheck } from "react-icons/fa6";
 
 export default function Segmental({ data }) {
@@ -37,7 +32,8 @@ export default function Segmental({ data }) {
           {activeCompositions["muscle"] && (
             <>
               {isIconShown && <IconLevelGood />}
-              Muscle {unit === "%" ?toPercent(value.muscle, weight) : value.muscle}
+              Muscle{" "}
+              {unit === "%" ? toPercent(value.muscle, weight) : value.muscle}
               {unit}
             </>
           )}
