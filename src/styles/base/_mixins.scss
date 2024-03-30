@@ -1,0 +1,47 @@
+
+// Mixin for padding & margin
+@mixin padding($size) {
+  @if $size == s {
+    padding: 6px;
+  } @else if $size == m {
+    padding: 12px;
+  } @else if $size == l {
+    padding: 18px;
+  } @else {
+    @error "Invalid padding size: #{$size}";
+  }
+}
+
+@mixin margin($size) {
+  @if $size == s {
+    margin: 6px;
+  } @else if $size == m {
+    margin: 12px;
+  } @else if $size == l {
+    margin: 18px;
+  }@else if $size == xl {
+    margin: 24px;
+  } @else {
+    @error "Invalid margin size: #{$size}";
+  }
+}
+
+// Center an element
+@mixin center-horizontal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

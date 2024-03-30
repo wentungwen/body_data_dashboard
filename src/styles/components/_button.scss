@@ -1,0 +1,45 @@
+// Variables
+$button-padding-y: 0.5rem;
+$button-padding-x: 1rem;
+$button-border-radius: 0.25rem;
+$button-font-size: 1rem;
+$button-font-weight: 500;
+$button-text-transform: uppercase;
+$button-transition: background-color 0.3s ease;
+
+// Button styles
+button {
+  display: inline-block;
+  padding: $button-padding-y $button-padding-x;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  text-transform: $button-text-transform;
+  cursor: pointer;
+  transition: $button-transition;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+// Primary button
+.primary-button {
+  @extend button;
+  background-color: var(--primary-color);
+  color: #ffffff;
+
+  &:hover {
+    opacity: 90%;
+  }
+}
+
+// Secondary button
+.secondary-button {
+  @extend button;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+
+  &:hover {
+    opacity: 90%;
+  }
+}

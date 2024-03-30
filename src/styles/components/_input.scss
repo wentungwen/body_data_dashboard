@@ -1,0 +1,44 @@
+// Input Styles
+$input-border-width: 1px;
+$input-border-color: #ccc;
+$input-border-radius: 3px;
+$input-focus-border-color: #007bff;
+$input-error-border-color: #dc3545;
+$input-padding: 6px;
+$input-margin: 12px;
+$input-font-size: 14px;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+$input-placeholder-color: #999;
+$input-disabled-opacity: 0.5;
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: $input-padding;
+  font-size: $input-font-size;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow;
+  }
+
+  &:disabled {
+    opacity: $input-disabled-opacity;
+  }
+
+  &.error {
+    border-color: $input-error-border-color;
+  }
+}

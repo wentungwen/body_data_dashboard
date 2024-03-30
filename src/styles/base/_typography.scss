@@ -1,0 +1,92 @@
+// Font Families
+$body-font-family: "Urbanist", sans-serif;
+$heading-font-family: "Urbanist", sans-serif;
+
+// Font Sizes
+$small-font-size: 0.9rem;
+$base-font-size: 1rem;
+$large-font-size: 1.5rem;
+$extra-large-font-size: 2rem;
+
+// Font Weights
+$regular-font-weight: 400;
+$bold-font-weight: 700;
+
+// Line Heights
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+$emphasis-color: var(--primary-color);
+
+// Heading Styles
+h1 {
+  font-family: $heading-font-family;
+  font-size: $extra-large-font-size;
+  font-weight: $bold-font-weight;
+  line-height: $heading-line-height;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: $heading-font-family;
+  font-size: $small-font-size;
+  font-weight: $bold-font-weight;
+  line-height: $heading-line-height;
+  margin-bottom: 15px;
+  color: var(--gray-color);
+}
+
+h3 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  font-weight: $bold-font-weight;
+  line-height: $heading-line-height;
+  margin-bottom: 15px;
+  color: var(--dark-gray-color);
+}
+
+h4 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  font-weight: $bold-font-weight;
+  line-height: $heading-line-height;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  font-weight: $regular-font-weight;
+  line-height: $heading-line-height;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font-family: $heading-font-family;
+  font-size: $small-font-size;
+  font-weight: $bold-font-weight;
+  line-height: $heading-line-height;
+  margin-bottom: 5px;
+}
+
+p {
+  font-family: $body-font-family;
+  font-size: $base-font-size;
+  font-weight: $regular-font-weight;
+  line-height: $base-line-height;
+  margin-bottom: 15px;
+}
+
+b {
+  font-weight: $bold-font-weight;
+}
+
+a {
+  color: $emphasis-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

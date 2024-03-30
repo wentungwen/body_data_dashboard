@@ -1,0 +1,125 @@
+// Generate Padding
+@mixin padding($size) {
+  padding: $size * 5px;
+}
+@for $i from 1 through 6 {
+  .p-#{$i} {
+    @include padding($i);
+  }
+}
+
+// Generate padding for all sides (mt, mr, mb, ml, mx, my)
+@mixin padding($direction, $size) {
+  @if $direction == "" {
+    padding: $size * 5px;
+  } @else if $direction == "t" {
+    padding-top: $size * 5px;
+  } @else if $direction == "r" {
+    padding-right: $size * 5px;
+  } @else if $direction == "b" {
+    padding-bottom: $size * 5px;
+  } @else if $direction == "l" {
+    padding-left: $size * 5px;
+  } @else if $direction == "x" {
+    padding-left: $size * 5px;
+    padding-right: $size * 5px;
+  } @else if $direction == "y" {
+    padding-top: $size * 5px;
+    padding-bottom: $size * 5px;
+  } @else {
+    @error "Invalid direction for padding utility class";
+  }
+}
+
+// Generate padding utility classes
+@for $i from 1 through 6 {
+  .p-#{$i} {
+    @include padding("", $i);
+  }
+  .pt-#{$i} {
+    @include padding("t", $i);
+  }
+  .pr-#{$i} {
+    @include padding("r", $i);
+  }
+  .pb-#{$i} {
+    @include padding("b", $i);
+  }
+  .pl-#{$i} {
+    @include padding("l", $i);
+  }
+  .px-#{$i} {
+    @include padding("x", $i);
+  }
+  .py-#{$i} {
+    @include padding("y", $i);
+  }
+}
+
+// Generate margin
+@mixin margin($size) {
+  margin: $size * 5px;
+}
+@for $i from 1 through 6 {
+  .m-#{$i} {
+    @include margin($i);
+  }
+}
+
+// Generate margin for all sides (mt, mr, mb, ml, mx, my)
+@mixin margin($direction, $size) {
+  @if $direction == "" {
+    margin: $size * 5px;
+  } @else if $direction == "t" {
+    margin-top: $size * 5px;
+  } @else if $direction == "r" {
+    margin-right: $size * 5px;
+  } @else if $direction == "b" {
+    margin-bottom: $size * 5px;
+  } @else if $direction == "l" {
+    margin-left: $size * 5px;
+  } @else if $direction == "x" {
+    margin-left: $size * 5px;
+    margin-right: $size * 5px;
+  } @else if $direction == "y" {
+    margin-top: $size * 5px;
+    margin-bottom: $size * 5px;
+  } @else {
+    @error "Invalid direction for margin utility class";
+  }
+}
+
+
+// Generate margin utility classes
+@for $i from 1 through 6 {
+  .m-#{$i} {
+    @include margin("", $i);
+  }
+  .mt-#{$i} {
+    @include margin("t", $i);
+  }
+  .mr-#{$i} {
+    @include margin("r", $i);
+  }
+  .mb-#{$i} {
+    @include margin("b", $i);
+  }
+  .ml-#{$i} {
+    @include margin("l", $i);
+  }
+  .mx-#{$i} {
+    @include margin("x", $i);
+  }
+  .my-#{$i} {
+    @include margin("y", $i);
+  }
+}
+
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  margin: 0;
+}

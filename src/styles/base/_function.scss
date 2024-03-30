@@ -1,0 +1,10 @@
+
+
+@function darken($color, $amount) {
+    @return mix(black, $color, $amount);
+  }
+  
+
+  @function lighten($color, $amount) {
+    @return mix(white, $color, $amount);
+  }

@@ -1,0 +1,69 @@
+$card-padding: 20px;
+$card-border-radius: 8px;
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$card-background: var(--white-color);
+$card-border: var(--border-color);
+
+// Card styles
+.card {
+  padding: $card-padding;
+  border-radius: $card-border-radius;
+  // box-shadow: $card-shadow;
+  background-color: $card-background;
+  border: $card-border solid;
+  
+  &.hover-effect {
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &.compact {
+    padding: 10px;
+  }
+
+  &.primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+
+  &.secondary {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+  }
+
+  &.success {
+    background-color: var(--success-color);
+    color: var(--white-color);
+  }
+
+  &.danger {
+    background-color: var(--danger-color);
+    color: var(--white-color);
+  }
+
+  &.warning {
+    background-color: var(--warning-color);
+    color: var(--dark-text);
+  }
+
+  &.info {
+    background-color: var(--info-color);
+    color: var(--white-color);
+  }
+
+  &.light {
+    background-color: var(--light-color);
+    color: var(--dark-text);
+  }
+
+  &.dark {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+  }
+
+  &.borderless {
+    border: none;
+  }
+}

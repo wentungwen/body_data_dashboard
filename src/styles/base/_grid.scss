@@ -1,0 +1,104 @@
+// Grid
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+
+// Grid: generating the classes from col-1 to col-12
+@mixin make-columns($grid-columns, $grid-gutter-width) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      width: calc(percentage($i / $grid-columns) - $grid-gutter-width);
+      float: left;
+      margin-right: calc($grid-gutter-width / 2);
+      margin-left: calc($grid-gutter-width / 2);
+      box-sizing: border-box;
+    }
+  }
+}
+
+@mixin make-gutter($grid-gutter-width) {
+  margin-left: calc($grid-gutter-width / 2);
+  margin-right: calc($grid-gutter-width / 2);
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc($grid-gutter-width / 2);
+  padding-right: calc($grid-gutter-width / 2);
+}
+
+.row {
+  width: 100%;
+  margin-left: calc($grid-gutter-width / 2);
+  margin-right: calc($grid-gutter-width / 2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  @include make-gutter($grid-gutter-width);
+}
+// from col-1 to col-12
+@include make-columns($grid-columns, $grid-gutter-width);
+
+// RWD
+// Extra large devices (large laptops and desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .quadrant-chart-section svg {
+    width: 100%;
+    transform: scale(1.2);
+  }
+}
+
+// Large devices (laptops/desktops, 992px and up)
+@media (max-width: 992px) {
+  .body-graph-col,
+  .body-comp-col,
+  .obesity-col {
+    width: 100%;
+  }
+  .body-comp-col {
+    margin-bottom: $grid-gutter-width;
+  }
+  .personal-col {
+    width: calc(40% - $grid-gutter-width);
+    margin-bottom: $grid-gutter-width;
+  }
+  .general-col {
+    width: calc(60% - $grid-gutter-width);
+    margin-bottom: $grid-gutter-width;
+  }
+}
+// Medium devices (landscape tablets, 768px and up)
+@media (max-width: 768px) {
+  .body-icon,
+  .setting {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .personal-col,
+  .general-col,
+  .pie-substance-col {
+    width: 100%;
+  }
+  .pie-col {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .obesity-label,
+  .obesity-barchart {
+    width: 100%;
+  }
+  .obesity-label {
+    display: flex;
+    align-items: center;
+    .label {
+      margin-right: 1rem;
+    }
+  }
+}
