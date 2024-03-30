@@ -2,21 +2,19 @@ import React from "react";
 import {
   MuscularBodyIcon,
   SkinnyBodyIcon,
-  SolidlyBuildBodyIcon,
-  HiddenObeseBodyIcon,
   AverageBodyIcon,
 } from "../assets/BodyGraphIcons";
 import criteriaData from "../data/criteriaData";
 
-const getAgeRange = (age) => {
-  if (age <= 18) {
-    return "teen";
-  } else if (age <= 65) {
-    return "middleAge";
-  } else {
-    return "senior";
-  }
-};
+// const getAgeRange = (age) => {
+//   if (age <= 18) {
+//     return "teen";
+//   } else if (age <= 65) {
+//     return "middleAge";
+//   } else {
+//     return "senior";
+//   }
+// };
 
 const generatedResults = (data) => {
   const gender = data.personalInfo.gender.value;

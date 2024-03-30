@@ -9,7 +9,7 @@ import Segmental from "../sections/Segmental";
 
 
 export default function MainPage() {
-  const {data, mappedData, updateData} = useContext(userDataContext)
+  const {data, mappedData} = useContext(userDataContext)
 
   const greeting = () => {
     const name = data.personalInfo.name;

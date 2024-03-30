@@ -7,7 +7,6 @@ import {
   AverageBodyIcon,
   StarIcon,
 } from "../assets/BodyGraphIcons";
-import GeneralInfo from "../sections/GeneralInfo";
 
 export default function QuadrantChart({ data }) {
   return (
