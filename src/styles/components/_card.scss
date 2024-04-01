@@ -11,6 +11,7 @@ $card-border: var(--border-color);
   // box-shadow: $card-shadow;
   background-color: $card-background;
   border: $card-border solid;
+  overflow: hidden;
   
   &.hover-effect {
     transition: transform 0.3s ease-in-out;

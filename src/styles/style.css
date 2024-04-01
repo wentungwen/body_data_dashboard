@@ -13,7 +13,6 @@ html {
 }
 html body, html #root {
   height: 100%;
-  overflow-x: hidden;
 }
 
 :root {
@@ -949,6 +948,7 @@ select.error {
   border-radius: 8px;
   background-color: var(--white-color);
   border: var(--border-color) solid;
+  overflow: hidden;
 }
 .card.hover-effect {
   transition: transform 0.3s ease-in-out;
